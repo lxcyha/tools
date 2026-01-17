@@ -1,0 +1,34 @@
+{
+  "name": "win-clipboard-history",
+  "version": "1.0.0",
+  "description": "A clipboard history tool like Alfred for Windows",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.clipboard.history",
+    "productName": "ClipboardHistory",
+    "win": {
+      "target": "nsis",
+      "icon": "icon.png"
+    },
+    "extraResources": [
+      "paste.vbs"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "conf": "^10.2.0",
+    "electron-store": "^8.1.0",
+    "moment": "^2.29.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  }
+}
